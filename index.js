@@ -112,6 +112,7 @@ bttn0.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("0");
@@ -122,6 +123,7 @@ bttn1.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("1");
@@ -132,6 +134,7 @@ bttn2.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("2");
@@ -142,6 +145,7 @@ bttn3.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("3");
@@ -152,6 +156,7 @@ bttn4.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("4");
@@ -162,6 +167,7 @@ bttn5.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("5");
@@ -172,6 +178,7 @@ bttn6.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("6");
@@ -182,6 +189,7 @@ bttn7.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("7");
@@ -192,6 +200,7 @@ bttn8.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("8");
@@ -202,6 +211,7 @@ bttn9.addEventListener('click', e => {
     if(flag=="resultado"){
         calculo="";
         display.innerHTML= calculo;
+        flag="";
     }
 
     calculo= calculo.concat("9");
@@ -229,4 +239,79 @@ bttnEqual.addEventListener('click', e => {
 
     flag="resultado";
 
+});
+
+
+window.addEventListener('keydown', e => {
+
+    switch (e.key) {
+
+        case 'Backspace':
+            bttnC.click();
+        break;
+        
+        case '1':
+            bttn1.click();
+        break;
+
+        case '2':
+            bttn2.click();
+        break;
+
+        case '3':
+            bttn3.click();
+        break;
+
+        case '4':
+            bttn4.click();
+        break;
+
+        case '5':
+            bttn5.click();
+        break;
+
+        case '6':
+            bttn6.click();
+        break;
+
+        case '7':
+            bttn7.click();
+        break;
+
+        case '8':
+            bttn8.click();
+        break;
+
+        case '9':
+            bttn9.click();
+        break;
+
+        case '0':
+            bttn0.click();
+        break;
+
+        case '/':
+            bttnDiv.click();
+        break;
+
+        case '*':
+            bttnMul.click();
+        break;
+
+        case '-':
+            bttnMinus.click();
+        break;
+
+        case '+':
+            bttnPlus.click();
+        break;
+
+        case 'Enter':
+            bttnEqual.click();
+        break;
+
+        case '.':
+            bttnDot.click();
+        break;
+    }
 });
