@@ -21,17 +21,21 @@ const bttn0= document.getElementById("bttn-0");
 
 const display= document.getElementById("calc");
 
-let calculo=""; 
+let calculo="0-0";
+display.innerHTML= calculo;
 
 let cont=0;
 let lastChar="";
+let flag="resultado";
 
 bttnC.addEventListener('click', e => {
     cont++;
     
     if(calculo.length>0){
-        if(calculo=="Infinity" || calculo=="Error")
-            calculo=""
+        if(calculo=="Infinity" || calculo=="Error" || flag=="resultado"){
+            calculo="";    
+            flag="";
+        }
         else
         calculo= calculo.slice(0, calculo.length-1);
     }
@@ -56,7 +60,8 @@ bttnDiv.addEventListener('click', e => {
 
         lastChar="/";
     }
-
+    
+    flag="";
 });
 bttnMul.addEventListener('click', e => {
 
@@ -67,6 +72,7 @@ bttnMul.addEventListener('click', e => {
         lastChar="*";
     }
 
+    flag="";
 });
 bttnMinus.addEventListener('click', e => {
     
@@ -77,6 +83,7 @@ bttnMinus.addEventListener('click', e => {
         lastChar="-";
     }
 
+    flag="";
 });
 bttnPlus.addEventListener('click', e => {
     
@@ -87,6 +94,7 @@ bttnPlus.addEventListener('click', e => {
         lastChar="+";
     }
 
+    flag="";
 });
 
 bttnDot.addEventListener('click', e => {
@@ -101,51 +109,101 @@ bttnDot.addEventListener('click', e => {
 });
 
 bttn0.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("0");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn1.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("1");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn2.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("2");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn3.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("3");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn4.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("4");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn5.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("5");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn6.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("6");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn7.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("7");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn8.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("8");
     display.innerHTML= calculo;
     lastChar="";
 });
 bttn9.addEventListener('click', e => {
+    if(flag=="resultado"){
+        calculo="";
+        display.innerHTML= calculo;
+    }
+
     calculo= calculo.concat("9");
     display.innerHTML= calculo;
     lastChar="";
@@ -168,5 +226,7 @@ bttnEqual.addEventListener('click', e => {
     else{
         display.innerHTML= calculo;
     }
+
+    flag="resultado";
 
 });
