@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    background: linear-gradient(to left bottom, rgb(234, 179, 8), rgb(168, 85, 247), rgb(59, 130, 246));
+
+}
+
+.content{
+    backdrop-filter: blur(05px) brightness(1.5);
+
+    width: 200px;
+    height: 300px;
+
+    margin: 0 auto;
+    display: flex;
+    
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 10px;
+
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+
+}
+
+#display{
+    background-color: rgba(0, 0, 0, 0.7);
+
+    width: calc(100% - 2rem);
+    height: 17%;
+    
+    font-family: monospace;
+    font-size: 2rem;
+    
+    border-radius: 5px;
+
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+
+    color: #ffffff;
+    
+    padding: 0 1rem;
+
+    /* overflow-x: auto;
+    overflow-y: hidden;*/
+
+    position: relative; 
+}
+
+#calc{
+    display: block;
+
+    width: calc(100% - 1rem);
+    height: 100%;
+
+    position: absolute;
+
+    top: 0; left: 0.5rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.buttons{
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    /* margin: 5px; */
+
+    background-color: rgba(255, 255, 255);
+    opacity: 0.9;
+    font-family: monospace;
+    font-size: 1.5rem;
+
+    border-radius: 5px;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255);
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+
+
+#bttn-plus{
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#bttn-C{
+    background-color: rgb(0,0,0);
+    color: white;
+}
+#bttn-equal{
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+    background-color: rgb(0,0,0);
+    color: white;
+
+}
+#bttn-dot{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+#bttn-0{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start:5;
+    grid-row-end: 6;
+}
+
+
+@media screen and (min-width: 400px){
+    .content{
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .content{
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-height: 300px){
+    .content{
+        width: 170px;
+        height: 270px;
+    }
+}
+
+@media screen and (max-height: 500px){
+    .content{
+        width: 200px;
+        height: 300px;
+    }
+}
